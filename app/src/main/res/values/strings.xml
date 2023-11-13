@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">LaborBuddy</string>
+    <string name="usuario">Usuario</string>
+    <string name="contrase_a">Contraseña</string>
+
+    <string name="confirm_inhabilitar_usuario">¿Estás seguro de que deseas inhabilitar al usuario?</string>
+    <string name="confirm_habilitar_usuario">¿Estás seguro de que deseas habilitar al usuario?</string>
+
+</resources>

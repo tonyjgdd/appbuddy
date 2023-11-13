@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    android:background="@color/white"
+    tools:context=".secciones.panel.tareas.DetallesTarea">
+
+    <!-- Título del mensaje (Asunto) -->
+    <TextView
+        android:id="@+id/textViewNombreTarea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombre de la Tarea"
+        android:gravity="center_horizontal"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:visibility="visible"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+    <!-- Título del mensaje (Asunto) -->
+    <EditText
+        android:id="@+id/editTextNombreTarea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre de la Tarea"
+        android:gravity="center_horizontal"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <!-- Datos del remitente -->
+    <TextView
+        android:id="@+id/textViewEstadoTareaLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="80dp"
+        android:layout_toLeftOf="@+id/textViewEstadoTarea"
+        android:text="Estado: "
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <!-- Datos del remitente -->
+    <TextView
+        android:id="@+id/textViewEstadoTarea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/textViewEstadoTareaLabel"
+        android:layout_alignParentEnd="true"
+        android:hint="Pendiente"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <!-- Datos del remitente -->
+    <TextView
+        android:id="@+id/textViewCreadorLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewEstadoTareaLabel"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:text="Creador: "
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <!-- Datos del remitente -->
+    <TextView
+        android:id="@+id/textViewCreador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewEstadoTarea"
+        android:layout_toRightOf="@id/textViewCreadorLabel"
+        android:layout_marginTop="20dp"
+        android:hint=" Nombre del creador"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <!-- Fecha y hora del mensaje -->
+    <TextView
+        android:id="@+id/textViewFechaCreacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewCreadorLabel"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:text="Fecha: 01 de Enero de 2023"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/textViewHoraCreacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewFechaCreacion"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:text="Hora: 22:00:00"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <!-- Datos del receptor -->
+    <TextView
+        android:id="@+id/textViewEncargadoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewHoraCreacion"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:text="Encargado: "
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <!-- Datos del receptor -->
+    <TextView
+        android:id="@+id/textViewEncargado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewHoraCreacion"
+        android:layout_toRightOf="@id/textViewEncargadoLabel"
+        android:layout_marginTop="20dp"
+        android:visibility="visible"
+        android:hint="Nombre del encargado"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <!-- Datos del receptor -->
+    <MultiAutoCompleteTextView
+        android:id="@+id/multiCompleteEncargado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewHoraCreacion"
+        android:layout_toRightOf="@id/textViewEncargadoLabel"
+        android:visibility="gone"
+        android:completionThreshold="1"
+        android:layout_alignBaseline="@id/textViewEncargadoLabel"
+        android:hint="Nombre del encargado"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <!-- Fecha y hora del mensaje -->
+    <TextView
+        android:id="@+id/textViewFechaEntrega"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewEncargado"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:hint="Fecha: 01 de Enero de 2023"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+<!-- Fecha y hora del mensaje -->
+    <EditText
+        android:id="@+id/editTextFechaEntrega"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/multiCompleteEncargado"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone"
+        android:layout_marginTop="8dp"
+        android:hint="Fecha: 01 de Enero de 2023"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/textViewHoraEntrega"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewFechaEntrega"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:hint="Hora: 22:00:00"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/editTextHoraEntrega"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextFechaEntrega"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone"
+        android:layout_marginTop="8dp"
+        android:hint="Hora: 22:00:00"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <!-- Contenido del mensaje -->
+    <TextView
+        android:id="@+id/textViewDescipcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contenido de la Tarea..."
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:layout_below="@id/textViewHoraEntrega"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="20dp" />
+
+    <!-- Contenido del mensaje -->
+    <EditText
+        android:id="@+id/editTextDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contenido de la Tarea..."
+        android:visibility="gone"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:layout_below="@id/editTextHoraEntrega"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="20dp" />
+
+    <!-- Botón de Responder -->
+    <Button
+        android:id="@+id/buttonRealizado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Realizado"
+        android:backgroundTint="#3F51B5"
+        android:textColor="@color/white"
+        android:layout_below="@id/textViewDescipcion"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/buttonEditarTarea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/buttonRealizado"
+        android:text="Editar"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/buttonGuardarTarea"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Guardar"
+        android:layout_below="@id/editTextDescripcion"
+        />
+
+    <Button
+        android:id="@+id/buttonCancelarEditar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:visibility="gone"
+        android:text="Cancelar"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/editTextDescripcion"
+        />
+
+
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/labor_buddy"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LaborBuddy"
+        tools:targetApi="31">
+        <activity
+            android:name=".secciones.panel.tareas.DetallesTarea"
+            android:exported="false" />
+        <activity
+            android:name=".secciones.panel.tareas.CrearTarea"
+            android:exported="false" />
+        <activity
+            android:name=".secciones.panel.usuarios.DatosUsuario"
+            android:exported="false" />
+        <activity
+            android:name=".secciones.panel.mensajeria.MensajeSalida"
+            android:exported="false" />
+        <activity
+            android:name=".secciones.panel.mensajeria.MensajeNuevo"
+            android:exported="false" />
+        <activity
+            android:name=".secciones.panel.mensajeria.MensajeEntrada"
+            android:exported="false" />
+        <activity
+            android:name=".secciones.panel.usuarios.JornadasUsuario"
+            android:exported="false" />
+        <activity
+            android:name=".secciones.panel.usuarios.CrearUsuario"
+            android:exported="false" />
+        <activity
+            android:name=".secciones.panel.usuarios.Usuarios"
+            android:exported="false" />
+        <activity
+            android:name=".secciones.panel.tareas.Tareas"
+            android:exported="false" />
+        <activity
+            android:name=".secciones.panel.mensajeria.Mensajeria"
+            android:exported="false" />
+        <activity
+            android:name=".inicio.PantallaPrincipal"
+            android:exported="false" />
+        <activity
+            android:name=".login.InicioSesion"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
